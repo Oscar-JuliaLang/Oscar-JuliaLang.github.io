@@ -5,4 +5,4 @@ title: Lecture notes
 
 These are session-style notes and mini “lecture notes” written collaboratively.
 
-- [2025-01-10 — Welcome & goals](2025-01-10-welcome-and-goals)
+- [2026-01-01 — Welcome & goals](2026-01-01-welcome-and-goals)

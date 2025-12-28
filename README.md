@@ -1,6 +1,6 @@
-# OSCAR × JuliaLang Reading Group (University of Leeds)
+# OSCAR & JuliaLang Reading Group (University of Leeds)
 
-This repository hosts the public-facing website for the OSCAR × JuliaLang Reading Group at the University of Leeds.
+This repository hosts the public-facing website for the OSCAR & JuliaLang Reading Group at the University of Leeds.
 
 We use it for:
 - **Lecture-style notes** from each session

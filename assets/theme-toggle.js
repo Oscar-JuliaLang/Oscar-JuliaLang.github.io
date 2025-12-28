@@ -1,12 +1,12 @@
 (() => {
-  const STORAGE_KEY = "theme"; // "light" | "dark" | null
+  const STORAGE_KEY = "theme"; // "light" | "dark" | null (system)
 
   function applyTheme(theme) {
     const root = document.documentElement;
     if (theme === "light" || theme === "dark") {
       root.setAttribute("data-theme", theme);
     } else {
-      root.removeAttribute("data-theme"); // fall back to system preference
+      root.removeAttribute("data-theme"); // system
     }
     updateButton(theme);
   }
@@ -26,12 +26,10 @@
   function updateButton(theme) {
     if (!btn) return;
     const current = theme ?? "system";
-    // You can change the labels/icons here:
     btn.textContent =
       current === "dark" ? "🌙 Dark" :
       current === "light" ? "☀️ Light" :
       "🖥️ System";
-    btn.setAttribute("aria-pressed", current === "dark" ? "true" : "false");
   }
 
   function cycleTheme() {
@@ -42,24 +40,17 @@
   }
 
   function injectButton() {
-    // Put it in the header (Minima)
-    const nav = document.querySelector(".site-header .site-nav");
     const wrapper = document.querySelector(".site-header .wrapper");
-    const target = nav || wrapper;
-
-    if (!target) return;
+    const title = document.querySelector(".site-title");
+    if (!wrapper || !title) return;
 
     btn = document.createElement("button");
     btn.className = "theme-toggle";
     btn.type = "button";
     btn.addEventListener("click", cycleTheme);
 
-    // Insert before nav links if possible
-    if (nav) {
-      nav.prepend(btn);
-    } else {
-      target.appendChild(btn);
-    }
+    // Insert right after the site title (safe with Minima’s nav structure)
+    title.insertAdjacentElement("afterend", btn);
 
     applyTheme(getStoredTheme());
   }

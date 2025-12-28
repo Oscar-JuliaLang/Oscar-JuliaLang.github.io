@@ -1,0 +1,110 @@
+---
+---
+
+@import "minima";
+
+/* ---------- Theme tokens (CSS variables) ---------- */
+:root {
+  /* Light */
+  --bg: #eff1f5;
+  --surface: #ffffff;
+  --text: #4c4f69;
+  --muted: #6c6f85;
+  --border: #dce0e8;
+
+  --accent: #1e66f5;     /* links */
+  --accent-2: #8839ef;   /* optional secondary accent */
+  --code-bg: #f6f7f9;
+  --code-text: #364a5e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark */
+    --bg: #1e1e2e;
+    --surface: #181825;
+    --text: #cdd6f4;
+    --muted: #a6adc8;
+    --border: #313244;
+
+    --accent: #89b4fa;
+    --accent-2: #cba6f7;
+    --code-bg: #11111b;
+    --code-text: #cdd6f4;
+  }
+}
+
+/* ---------- Apply tokens to Minima ---------- */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.site-header,
+.site-footer,
+.post-meta,
+.footer-col-wrapper {
+  border-color: var(--border);
+}
+
+.site-title, .site-title:visited,
+.site-nav .page-link {
+  color: var(--text);
+}
+
+a, a:visited {
+  color: var(--accent);
+}
+a:hover {
+  color: var(--accent-2);
+  text-decoration-thickness: 2px;
+}
+
+.page-content .wrapper {
+  /* slightly wider reading area */
+  max-width: 980px;
+}
+
+/* Cards-ish feel for posts/pages (subtle) */
+.post, .page-content {
+  background: transparent;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+/* Code blocks */
+pre, code {
+  background: var(--code-bg);
+  color: var(--code-text);
+  border-radius: 10px;
+}
+pre {
+  padding: 1rem;
+  overflow: auto;
+  border: 1px solid var(--border);
+}
+
+/* Blockquotes */
+blockquote {
+  color: var(--muted);
+  border-left: 4px solid var(--accent);
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+}
+
+/* Tables (optional but nice for FAQs) */
+table {
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+}
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.6rem;
+}
+th {
+  background: color-mix(in srgb, var(--surface) 85%, transparent);
+}

@@ -24,3 +24,20 @@
   --code-bg: #11111b;
   --code-text: #cdd6f4;
 }
+
+
+.theme-toggle {
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 85%, var(--accent) 15%);
+  color: var(--text);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.theme-toggle:hover {
+  background: color-mix(in srgb, var(--surface) 70%, var(--accent) 30%);
+}

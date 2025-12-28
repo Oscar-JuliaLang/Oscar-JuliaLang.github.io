@@ -1,4 +1,4 @@
-/* ===== Header / title block (Minima) ===== */
+/* ===== Header / title block tweaks for Minima ===== */
 
 .site-header {
   border-top: 0;
@@ -6,31 +6,25 @@
   background: var(--surface);
 }
 
-/* Align header content nicely */
 .site-header .wrapper {
-  max-width: 980px;
+  max-width: 980px;          /* match your content width */
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
 
-/* Title "pill" */
-.site-title,
-.site-title:visited {
+/* Title “block” */
+.site-title {
   font-weight: 800;
   letter-spacing: 0.2px;
   font-size: 1.15rem;
-
   padding: 0.55rem 0.85rem;
   border-radius: 14px;
-
   background: color-mix(in srgb, var(--surface) 85%, var(--accent) 15%);
   border: 1px solid var(--border);
-
   color: var(--text) !important;
   text-decoration: none;
 }
@@ -39,64 +33,17 @@
 .site-nav .page-link {
   color: var(--text) !important;
   opacity: 0.9;
-
   padding: 0.4rem 0.55rem;
   border-radius: 10px;
   text-decoration: none;
 }
 
 .site-nav .page-link:hover {
-  opacity: 1;
   background: color-mix(in srgb, var(--surface) 70%, var(--accent) 30%);
+  opacity: 1;
 }
 
-/* Mobile menu icon color (dark mode friendly) */
+/* Make the mobile menu icon fit dark mode nicely (optional) */
 .site-nav .menu-icon > svg path {
   fill: var(--text);
 }
-
-
-/* Manual override via the toggle button */
-:root[data-theme="light"] {
-  --bg: #eff1f5;
-  --surface: #ffffff;
-  --text: #4c4f69;
-  --muted: #6c6f85;
-  --border: #dce0e8;
-  --accent: #1e66f5;
-  --accent-2: #8839ef;
-  --code-bg: #f6f7f9;
-  --code-text: #364a5e;
-}
-
-:root[data-theme="dark"] {
-  --bg: #1e1e2e;
-  --surface: #181825;
-  --text: #cdd6f4;
-  --muted: #a6adc8;
-  --border: #313244;
-  --accent: #89b4fa;
-  --accent-2: #cba6f7;
-  --code-bg: #11111b;
-  --code-text: #cdd6f4;
-}
-
-.theme-toggle {
-  margin-left: 0.75rem;
-
-  font: inherit;
-  font-size: 0.95rem;
-  padding: 0.35rem 0.6rem;
-
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: color-mix(in srgb, var(--surface) 85%, var(--accent) 15%);
-  color: var(--text);
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.theme-toggle:hover {
-  background: color-mix(in srgb, var(--surface) 70%, var(--accent) 30%);
-}
-

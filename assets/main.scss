@@ -56,7 +56,6 @@
 }
 
 
-
 /* Manual override via the toggle button */
 :root[data-theme="light"] {
   --bg: #eff1f5;
@@ -64,7 +63,6 @@
   --text: #4c4f69;
   --muted: #6c6f85;
   --border: #dce0e8;
-
   --accent: #1e66f5;
   --accent-2: #8839ef;
   --code-bg: #f6f7f9;
@@ -77,18 +75,19 @@
   --text: #cdd6f4;
   --muted: #a6adc8;
   --border: #313244;
-
   --accent: #89b4fa;
   --accent-2: #cba6f7;
   --code-bg: #11111b;
   --code-text: #cdd6f4;
 }
 
-
 .theme-toggle {
+  margin-left: 0.75rem;
+
   font: inherit;
   font-size: 0.95rem;
   padding: 0.35rem 0.6rem;
+
   border-radius: 12px;
   border: 1px solid var(--border);
   background: color-mix(in srgb, var(--surface) 85%, var(--accent) 15%);
@@ -100,3 +99,4 @@
 .theme-toggle:hover {
   background: color-mix(in srgb, var(--surface) 70%, var(--accent) 30%);
 }
+

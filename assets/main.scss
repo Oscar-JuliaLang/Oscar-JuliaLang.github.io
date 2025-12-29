@@ -356,3 +356,39 @@ th {
 .site-footer {
   background: transparent;
 }
+
+/* ===== Header layout: title on top, nav below ===== */
+
+.site-header .wrapper {
+  max-width: 980px;
+  padding-top: 1.1rem;
+  padding-bottom: 1.0rem;
+}
+
+/* Make title take its own row */
+.site-title,
+.site-title:visited {
+  display: inline-block;
+  margin: 0;
+}
+
+/* Force nav onto the next line */
+.site-nav {
+  display: block;
+  float: none;          /* Minima uses floats; this cancels them */
+  margin-top: 0.75rem;
+  text-align: left;     /* change to center if you prefer */
+}
+
+/* Make nav links wrap nicely */
+.site-nav .page-link {
+  display: inline-block;
+  margin: 0.15rem 0.25rem 0 0;
+}
+
+/* Put the toggle with the nav, not next to the title (recommended) */
+.site-nav .theme-toggle {
+  margin-left: 0.5rem;
+  margin-top: 0.15rem;
+}
+

@@ -114,113 +114,71 @@ hr {
 }
 
 /* =========================================================
-   Header (Minima): title on top, nav below
+   Header (Minima): keep default layout, just recolor
    ========================================================= */
 
 .site-header {
   border-top: 0 !important;
   border-bottom: 1px solid var(--border) !important;
   background: var(--surface) !important;
-
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  .site-header {
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
-  }
-}
-
-.site-header .wrapper {
-  padding-top: 1.1rem;
-  padding-bottom: 1rem;
-}
-
-/* Title pill */
 .site-title,
 .site-title:visited {
-  display: inline-block;
-  font-weight: 800;
-  letter-spacing: 0.2px;
-  font-size: 1.15rem;
-  line-height: 1.2;
-
-  padding: 0.55rem 0.85rem;
-  border-radius: 14px;
-
-  background: var(--surface); /* fallback */
-  background: color-mix(in srgb, var(--surface) 85%, var(--accent) 15%);
-  border: 1px solid var(--border);
-
   color: var(--text) !important;
   text-decoration: none;
+  font-weight: 700;
 }
 
-/* Force nav onto the next line (Minima uses floats) */
-.site-nav {
-  display: block;
-  float: none;
-  margin-top: 0.75rem;
-  text-align: left; /* change to center if you prefer */
+.site-title:hover {
+  color: var(--accent) !important;
 }
 
-/* Nav links as pills, wrap nicely */
 .site-nav .page-link {
-  display: inline-block;
   color: var(--text) !important;
   opacity: 0.9;
-
-  padding: 0.4rem 0.55rem;
-  border-radius: 10px;
   text-decoration: none;
-
-  margin: 0.15rem 0.25rem 0 0;
 }
 
 .site-nav .page-link:hover {
   opacity: 1;
-  background: var(--surface); /* fallback */
-  background: color-mix(in srgb, var(--surface) 70%, var(--accent) 30%);
+  color: var(--accent) !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-/* Mobile menu icon color */
 .site-nav .menu-icon > svg path {
   fill: var(--text);
 }
 
-/* Theme toggle button (place it in the nav) */
+/* Theme toggle: look like a normal small button/link */
 .theme-toggle {
-  display: inline-block;
-  vertical-align: middle;
-
   font: inherit;
   font-size: 0.95rem;
   line-height: 1;
 
-  padding: 0.4rem 0.65rem;
-  border-radius: 12px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
 
   border: 1px solid var(--border);
-  background: var(--surface); /* fallback */
-  background: color-mix(in srgb, var(--surface) 85%, var(--accent) 15%);
+  background: transparent;
   color: var(--text);
 
   cursor: pointer;
-  white-space: nowrap;
-
   margin-left: 0.5rem;
-  margin-top: 0.15rem;
 }
 
 .theme-toggle:hover {
-  background: var(--surface); /* fallback */
-  background: color-mix(in srgb, var(--surface) 70%, var(--accent) 30%);
+  border-color: color-mix(in srgb, var(--border) 60%, var(--accent) 40%);
+  color: var(--accent);
 }
 
 .theme-toggle:focus-visible {
   outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent);
   outline-offset: 2px;
 }
+
 
 /* =========================================================
    Content styling

@@ -81,7 +81,104 @@ body {
 
 /* Make the main reading column a bit wider */
 .page-content .wrapper,
-.site-header .wrapper,
+// .site-header .wrapper,
+/* ===== Header / title block (Minima-friendly, no layout breakage) ===== */
+
+.site-header {
+  border-top: 0 !important;
+  border-bottom: 1px solid var(--border) !important;
+  background: var(--surface) !important;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  .site-header { box-shadow: 0 10px 40px rgba(0,0,0,0.35); }
+}
+
+/* Keep Minima's layout; just tune spacing */
+.site-header .wrapper {
+  max-width: 980px;
+  padding-top: 1.0rem;
+  padding-bottom: 1.0rem;
+}
+
+/* Title pill */
+.site-title,
+.site-title:visited {
+  display: inline-block;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  font-size: 1.1rem;
+
+  padding: 0.5rem 0.8rem;
+  border-radius: 14px;
+
+  background: color-mix(in srgb, var(--surface) 85%, var(--accent) 15%);
+  border: 1px solid var(--border);
+
+  color: var(--text) !important;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+/* Put the nav on the right and align items */
+.site-nav {
+  margin-top: 0.35rem;
+}
+
+/* Make nav links look like pills, wrap nicely */
+.site-nav .page-link {
+  display: inline-block;
+  color: var(--text) !important;
+  opacity: 0.9;
+
+  padding: 0.35rem 0.55rem;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-left: 0.15rem;
+  margin-right: 0.15rem;
+}
+
+.site-nav .page-link:hover {
+  opacity: 1;
+  background: color-mix(in srgb, var(--surface) 70%, var(--accent) 30%);
+}
+
+/* Mobile menu icon color */
+.site-nav .menu-icon > svg path {
+  fill: var(--text);
+}
+
+/* Theme toggle: ensure it doesn't crash the header layout */
+.theme-toggle {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.6rem;
+  margin-top: 0.15rem;
+
+  font: inherit;
+  font-size: 0.95rem;
+  line-height: 1;
+
+  padding: 0.35rem 0.6rem;
+  border-radius: 12px;
+
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 85%, var(--accent) 15%);
+  color: var(--text);
+
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.theme-toggle:hover {
+  background: color-mix(in srgb, var(--surface) 70%, var(--accent) 30%);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  outline-offset: 2px;
+}
 .site-footer .wrapper {
   max-width: 980px;
 }

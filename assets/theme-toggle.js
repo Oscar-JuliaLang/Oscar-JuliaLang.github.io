@@ -50,7 +50,10 @@
     btn.addEventListener("click", cycleTheme);
 
     // Insert right after the site title (safe with Minima’s nav structure)
-    title.insertAdjacentElement("afterend", btn);
+    // title.insertAdjacentElement("afterend", btn);
+    const nav = document.querySelector(".site-nav");
+(nav || title).insertAdjacentElement("beforeend", btn);
+
 
     applyTheme(getStoredTheme());
   }

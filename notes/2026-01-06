@@ -1,0 +1,18 @@
+---
+layout: page
+title: "Julia setup"
+---
+
+## 0. Setup (before class) — step by step
+
+### 1) Install Julia
+1. Download Julia for your operating system (Windows / macOS / Linux) from the official Julia website.
+2. Install Julia:
+   - **Windows:** run the `.exe` installer.
+   - **macOS:** open the `.dmg` and drag Julia to Applications (or follow the package instructions).
+   - **Linux:** extract the tarball and add Julia to your `PATH` (or create a symlink).
+3. Verify the installation by opening a terminal (or PowerShell on Windows) and running:
+   ```bash
+   julia --version
+  ```
+

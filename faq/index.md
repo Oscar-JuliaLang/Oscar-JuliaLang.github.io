@@ -19,3 +19,9 @@ Small fixes are welcome — typos, clarifications, extra links, better explanati
 - GitHub for notes and discussion
 - Julia + OSCAR for hands-on exploration
 (We’ll add more specifics as the group converges on a workflow.)
+
+## How do I download Julia + OSCAR on a (Windows) university laptop?
+- Install Windows Subsystem for Linux (WSL).
+OSCAR works best in a Linux environment. On a university-managed laptop, you may need to contact the IT service desk to have WSL installed. We recommend installing Ubuntu (as the distribution) following the steps [here](https://learn.microsoft.com/en-us/windows/wsl/install).
+- Install Julia + OSCAR inside WSL.
+Follow the rest of the steps [here](https://www.oscar-system.org/install/win/) to complete the installation of OSCAR. This shouldnt require any aditional permissions or support from IT.

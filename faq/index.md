@@ -7,7 +7,7 @@ title: FAQ
 Anyone interested in OSCAR and JuliaLang, especially people who want to learn collaboratively and build reusable notes.
 
 ## Do I need to be an expert?
-No. Bringing questions is a feature, not a bug.
+No.
 
 ## How do I contribute notes?
 Add or edit Markdown files under `notes/`. If you add a new note, also add a link in `notes/index.md`.

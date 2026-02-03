@@ -4,10 +4,10 @@ title: FAQ
 ---
 
 ## Who is this for?
-Anyone interested in OSCAR and JuliaLang, especially people who want to learn collaboratively and build reusable notes.
+Anyone interested in OSCAR and JuliaLang, especially people who find it easier to learn collaboratively.
 
 ## Do I need to be an expert?
-No.
+No. We're certainly not.
 
 ## How do I contribute notes?
 Add or edit Markdown files under `notes/`. If you add a new note, also add a link in `notes/index.md`.

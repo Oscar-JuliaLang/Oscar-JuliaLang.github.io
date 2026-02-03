@@ -28,5 +28,4 @@ Initial organizers / contributors:
 - [Lecture notes](./notes/)
 - [FAQ](./faq/)
 
-## How to join
-If you are at Leeds (or nearby) and want to join, feel free to open an Issue in this repo with a short intro and what you’re interested in reading/trying next.
+

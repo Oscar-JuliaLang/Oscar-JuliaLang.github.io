@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Julia setup | OSCAR and JuliaLang Reading Group</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Julia setup" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="University of Leeds — notes, updates, and FAQ" />
+<meta property="og:description" content="University of Leeds — notes, updates, and FAQ" />
+<link rel="canonical" href="http://localhost:4000/notes/2026-01-06-julia-setup.html" />
+<meta property="og:url" content="http://localhost:4000/notes/2026-01-06-julia-setup.html" />
+<meta property="og:site_name" content="OSCAR and JuliaLang Reading Group" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Julia setup" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"University of Leeds — notes, updates, and FAQ","headline":"Julia setup","url":"http://localhost:4000/notes/2026-01-06-julia-setup.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="OSCAR and JuliaLang Reading Group" /><!-- Theme toggle -->
+  <script src="/assets/theme-toggle.js" defer></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">OSCAR and JuliaLang Reading Group</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/notes/">Lecture notes</a><a class="page-link" href="/faq/">FAQ</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Julia setup</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="0-setup-before-class--step-by-step">0. Setup (before class) — step by step</h2>
+
+<h3 id="1-install-julia">1) Install Julia</h3>
+<ol>
+  <li>Download Julia for your operating system (Windows / macOS / Linux) from the official Julia website.</li>
+  <li>Install Julia:
+    <ul>
+      <li><strong>Windows:</strong> run the <code class="language-plaintext highlighter-rouge">.exe</code> installer.</li>
+      <li><strong>macOS:</strong> open the <code class="language-plaintext highlighter-rouge">.dmg</code> and drag Julia to Applications (or follow the package instructions).</li>
+      <li><strong>Linux:</strong> extract the tarball and add Julia to your <code class="language-plaintext highlighter-rouge">PATH</code> (or create a symlink).</li>
+    </ul>
+  </li>
+  <li>
+    <p>Verify the installation by opening a terminal (or PowerShell on Windows) and running:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>julia <span class="nt">--version</span>
+</code></pre></div>    </div>
+
+    <p>You should see the installed Julia version. For example:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>julia version 1.12.2
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="2-install-vs-code--julia-extension">2) Install VS Code + Julia extension</h3>
+
+<ol>
+  <li>Install Visual Studio Code.</li>
+  <li>Open VS Code.</li>
+  <li>Open Extensions and search for Julia.</li>
+  <li>Install the Julia extension (publisher: Julia).</li>
+  <li>If VS Code doesn’t find Julia automatically, set the Julia executable path:
+    <ul>
+      <li>Open Settings</li>
+      <li>Search for Julia: Executable Path</li>
+      <li>Set it to your Julia binary, e.g.:</li>
+      <li>Windows: <code class="language-plaintext highlighter-rouge">C:\...\Julia-1.x.y\bin\julia.exe</code></li>
+      <li>macOS: <code class="language-plaintext highlighter-rouge">/Applications/Julia-1.x.app/Contents/Resources/julia/bin/julia</code></li>
+      <li>Linux: <code class="language-plaintext highlighter-rouge">/opt/julia-1.x.y/bin/julia</code></li>
+    </ul>
+  </li>
+  <li>Quick test:
+    <ul>
+      <li>Start the Julia REPL (Command Palette → “Julia: Start REPL”)</li>
+    </ul>
+
+    <p><img src="/assets/img/start_REPL.png" alt="Julia REPL in VS Code" style="max-width: 400px;" /></p>
+
+    <ul>
+      <li>In the REPL, run:</li>
+    </ul>
+
+    <div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>    </div>
+    <p>You should see the output <code class="language-plaintext highlighter-rouge">2</code>.</p>
+
+    <p><img src="/assets/img/REPL.png" alt="Julia REPL output" style="max-width: 400px;" /></p>
+  </li>
+</ol>
+
+<h3 id="optional-install-julia-extension-for-jupyter-notebooks">Optional: Install Julia extension for Jupyter notebooks</h3>
+<ul>
+  <li>In VS Code, open Extensions and search for Jupyter.</li>
+  <li>Install the Jupyter extension (publisher: Microsoft).</li>
+</ul>
+
+<h3 id="3-create-a-folder-for-demos-julia-repro-demo">3) Create a folder for demos: julia-repro-demo</h3>
+<ul>
+  <li>Open a terminal in the location where you want the lecture materials.</li>
+  <li>Create the folder:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">mkdir </span>julia-repro-demo
+</code></pre></div></div>
+
+<ul>
+  <li>Enter the folder:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">cd </span>julia-repro-demo
+</code></pre></div></div>
+<ul>
+  <li>Start Julia from inside the folder:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   julia
+</code></pre></div></div>
+
+<ul>
+  <li>Optional sanity check (in Julia):</li>
+</ul>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">pwd</span><span class="x">()</span>
+</code></pre></div></div>
+<p>You should see the path to the <code class="language-plaintext highlighter-rouge">julia-repro-demo</code> folder.</p>
+
+<h3 id="4-create-a-new-julia-environment">4) Create a new Julia environment</h3>
+<ul>
+  <li>In the Julia REPL, enter the package manager by typing <code class="language-plaintext highlighter-rouge">]</code> (you should see the prompt change to <code class="language-plaintext highlighter-rouge">(@v1.x) pkg&gt;</code>).</li>
+  <li>Create a new environment named <code class="language-plaintext highlighter-rouge">DemoEnv</code>:</li>
+</ul>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">activate</span> <span class="n">DemoEnv</span>
+</code></pre></div></div>
+<ul>
+  <li>You should see the prompt change to <code class="language-plaintext highlighter-rouge">(DemoEnv) pkg&gt;</code>.</li>
+  <li>To verify, you can check the current environment:</li>
+</ul>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">status</span>
+</code></pre></div></div>
+<p>You should see an empty environment.</p>
+<ul>
+  <li>Exit the package manager by pressing Backspace or Ctrl+C.</li>
+</ul>
+
+<h4 id="why-use-a-project-environment">Why use a project environment?</h4>
+
+<p>Creating a new Julia environment is how you make your project reproducible and isolated.</p>
+
+<p>If you work in Julia’s global environment (@v1.x), you slowly accumulate packages and versions. 
+   Then:</p>
+<ul>
+  <li>your code might run only because you happen to have some package installed globally</li>
+  <li>updates can silently change results or break code</li>
+  <li>a collaborator (or future you) can’t reliably rerun the project.</li>
+</ul>
+
+<p>A project environment fixes that by recording exactly what the project depends on.</p>
+
+<p>#### What you get with a new environment</p>
+<ul>
+  <li>Isolation: each project has its own dependency set.</li>
+  <li>Reproducibility: you can share <code class="language-plaintext highlighter-rouge">Project.toml</code> and <code class="language-plaintext highlighter-rouge">Manifest.toml</code>; others run instantiate and get the same setup.</li>
+  <li>Fewer “it works on my machine” moments: missing packages show up immediately because the project must declare them.</li>
+  <li>Safer updates: you can update dependencies for one project without risking others.</li>
+</ul>
+
+<h4 id="the-key-idea-in-one-sentence">The key idea in one sentence</h4>
+
+<p>An environment makes your project’s computational setup explicit, portable, and repeatable.</p>
+
+<h3 id="5-install-required-packages">5) Install required packages</h3>
+<ul>
+  <li>In the Julia REPL, enter the package manager again by typing <code class="language-plaintext highlighter-rouge">]</code>.</li>
+  <li>Install the required packages:</li>
+</ul>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">add</span> <span class="n">Oscar</span>
+</code></pre></div></div>
+<ul>
+  <li>Wait for the installation to complete.</li>
+  <li>Exit the package manager by pressing Backspace or Ctrl+C.</li>
+</ul>
+
+<h3 id="6-test-the-setup">6) Test the setup</h3>
+<ul>
+  <li>In the Julia REPL, run the following commands to test if everything is set up correctly:</li>
+</ul>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="k">using</span> <span class="n">Oscar</span>
+   <span class="n">G</span> <span class="o">=</span> <span class="n">complete_graph</span><span class="x">(</span><span class="mi">5</span><span class="x">)</span>
+   <span class="n">println</span><span class="x">(</span><span class="n">G</span><span class="x">)</span>
+</code></pre></div></div>
+<p>You should see the output representing a complete graph with 5 vertices.</p>
+
+<ul>
+  <li>If you see the expected output, your Julia setup is complete and ready for use!</li>
+  <li>If you encounter any errors, please refer to the troubleshooting section below.</li>
+</ul>
+
+<h3 id="troubleshooting">Troubleshooting</h3>
+<ul>
+  <li>If you encounter issues during installation or while running Julia, consider the following steps:
+    <ul>
+      <li>Ensure that Julia is correctly installed and accessible from your terminal.</li>
+      <li>Verify that the Julia extension in VS Code is properly configured with the correct executable path.</li>
+      <li>Check for any error messages in the Julia REPL and search for solutions online or refer to the Julia documentation.</li>
+      <li>If package installation fails, try updating the package registry with <code class="language-plaintext highlighter-rouge">] registry update</code> before adding packages.</li>
+      <li>Restart VS Code and try again if issues persist.</li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">OSCAR and JuliaLang Reading Group</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">OSCAR and JuliaLang Reading Group</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>University of Leeds — notes, updates, and FAQ</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

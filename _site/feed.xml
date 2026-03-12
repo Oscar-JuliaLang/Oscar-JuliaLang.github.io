@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-01-15T14:15:00+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">OSCAR and JuliaLang Reading Group</title><subtitle>University of Leeds — notes, updates, and FAQ</subtitle><entry><title type="html">Welcome to the OSCAR and JuliaLang Reading Group</title><link href="http://localhost:4000/2026/01/01/welcome.html" rel="alternate" type="text/html" title="Welcome to the OSCAR and JuliaLang Reading Group" /><published>2026-01-01T00:00:00+00:00</published><updated>2026-01-01T00:00:00+00:00</updated><id>http://localhost:4000/2026/01/01/welcome</id><content type="html" xml:base="http://localhost:4000/2026/01/01/welcome.html"><![CDATA[<p>We’re starting a reading group at the University of Leeds focused on <strong>OSCAR</strong> and <strong>JuliaLang</strong>.</p>
+
+<p>This website will host:</p>
+<ul>
+  <li>session notes,</li>
+  <li>short updates,</li>
+  <li>and a growing FAQ.</li>
+</ul>
+
+<p>If you’d like to join or suggest a topic, open an Issue in this repo with a short note about your interests.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[We’re starting a reading group at the University of Leeds focused on OSCAR and JuliaLang.]]></summary></entry></feed>

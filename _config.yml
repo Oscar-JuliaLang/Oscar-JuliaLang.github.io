@@ -4,6 +4,5 @@ theme: minima
 markdown: kramdown
 
 header_pages:
-  - index.md
   - notes/index.md
   - faq/index.md

@@ -1,0 +1,9 @@
+title: "OSCAR and JuliaLang Reading Group"
+description: "University of Leeds — notes, updates, and FAQ"
+theme: minima
+markdown: kramdown
+
+header_pages:
+  - index.md
+  - notes/index.md
+  - faq/index.md

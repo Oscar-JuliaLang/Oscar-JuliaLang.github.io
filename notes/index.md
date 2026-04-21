@@ -8,7 +8,7 @@ These are session-style notes and mini “lecture notes” written collaborative
 - [2026-01-01 — Welcome & goals](2026-01-01-welcome-and-goals)
 - [Session 1 — Introduction to OSCAR and Julia](Session1)
 
-{% assign notes = site.notes/sessions | sort: "date" | reverse %}
+{% assign notes = site.notes/Sessions | sort: "date" | reverse %}
 {% for item in notes %}
 - *{{ item.date | date: "%B %-d, %Y" }}*, [{{ item.title }}]({{ item.url }}), {{ item.speaker }}
 {% endfor %}

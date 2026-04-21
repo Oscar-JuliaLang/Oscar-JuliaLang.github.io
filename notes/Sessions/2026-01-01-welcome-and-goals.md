@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Welcome & goals
+title: Session 0 - Welcome & goals
 date: 2026-01-01
 speaker:
 ---

@@ -1,6 +1,8 @@
 ---
 layout: page
-title: "Welcome & goals"
+title: Welcome & goals
+date: 2026-01-01
+speaker:
 ---
 
 ## Goals for the group

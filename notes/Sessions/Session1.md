@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Introduction to OSCAR and Julia
-Speaker: Ilaria Colazzo
+speaker: Ilaria Colazzo
 date: 2026-03-12
 ---
 
